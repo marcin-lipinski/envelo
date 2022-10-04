@@ -1,0 +1,29 @@
+Czym różni się tablica od listy liniowej?
+
+
+	Deklarując tablicę musimy ustawić na twardo jej rozmiar, podczas gdy rozmiar listy liniowej jest 
+modyfikowalny. Wiąże się z tym to, że jeśli chcemy w tablicy przechowywać więcej elementów niż zostało 
+to zadeklarowane, to musimy utworzyć nową, większą tablicę i przekopiować do niej starą. W liście 
+ten problem nie występuje.
+
+	Przy deklaracji tablicy rezerwowany jest ciągły obszar pamięci wielkości |rozmiar tablicy| * |rozmiar 
+przechowywanego typu|. Elementy listy liniowej są natomiast "rozrzucane" po pamięci.
+
+	Tablica pod jednym adresem przechowuje jedynie wartość zadeklarowanego typu. Lista przechowuje natomiast
+wartość oraz wskaźnik na następny węzeł (oraz poprzedni jeśli lista jest dwukierunkowa).
+
+	W tablicy możemy łatwo dostawać się do konkretnych elementów za pomocą indeksów. W liście natomiast 
+operacja ta trwa dłużej, ponieważ, aby dostać się do konkretnego elementu, musimy zacząć przeszukiwanie 
+od pierwszego elementu listy, przez kolejne, aż dojdziemy do tego elementu. 	
+
+	Posługując się listą możemy zarządzać pamięcią, gdyż zajmuje ona tyle miejsca, ile węzłów przechowuje. 
+Tablica natomiast ma zawsze stałą wielkość, niezależnie od ilości przechowywanych elementów.
+
+	Aby wstawić element na początek tablicy musimy przesunąć wszystkie elementy o jedno miejsce dalej.
+W liście wystarczy stworzyć nowy wierzchołek, we wskaźniku na następny element dać wskaźnik na poprzedni
+pierwszy element oraz zmienić wartość zmiennej przechowującej wskaźnik na pierwszy element listy.
+	Aby dodać element na koniec tablicy wystarczy wskazać na ostatnią wolną komórkę w pamięci. W liście
+trzeba przejść od pierwszego elementu przez kolejne, aż znajdziemy taki, w którym wskaźnik na następny
+element jest pusty.
+	Jeśli tablica jest pełna to trzeba ją dodatkowo przekopiować (pkt. 1).
+	

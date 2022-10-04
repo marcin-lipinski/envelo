@@ -1,0 +1,17 @@
+private boolean search(int[] numbers, int x){
+        int leftBorder = 0;
+        int rightBorder = numbers.length - 1;
+        int middle;
+
+        while(leftBorder <= rightBorder){
+            middle = (leftBorder + rightBorder)/2;
+            if(x == numbers[middle]) return true;
+            if(x > numbers[middle]) rightBorder = middle - 1;
+            else leftBorder = middle + 1;
+        }
+        return false;
+    }
+
+
+Szacowana złożoność obliczeniowa tego algorytmu to logarytm o podstawie 2 z n.
+Złożoność pamięciowa tego algorytmu jest stała - O(1).

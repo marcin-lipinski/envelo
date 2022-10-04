@@ -1,0 +1,19 @@
+W jakim celu używa się klas abstrakcyjnych, a w jakim interfejsów?
+
+
+	Klasa abstrakcyjna, oprócz tego że zawiera co najmniej jedną metodę abstrakcyjną, to może też
+zawierać metody nie abstrakcyjne, konstruktory oraz zmienne. Mogą więc ją rozszerzać klasy, które należą
+do jakiejś grupy klas (podobnych sobie). Metody nie-abstrakcyjne będą odziedziczone i nie będzie trzeba 
+pisać ich ciała. Zaletą będzie to, że chcąc rozbudować te klasy o jakąś funkcjonalność wystarczy,
+że zrobimy to w klasie abstrakcyjnej implementując konkretną metodę/metody. 
+
+	Jeśli zależy nam, aby wiele klas korzystało z jakiejś funkcjonalności, to należy użyć interfejsu. 
+Jeśli tych funkcjonalności ma być więcej, to skorzystamy z zalety intefejsów, jaką jest możliwość
+implementacji wielu z nich.
+
+	Interfejs może być też użyty jako pewien znacznik, tzn. możemy utworzyć pusty interfejs o nazwie, 
+która będzie wskazywała, że klasa go implementująca będzie np. podlegała jakiejś zasadzie.
+
+	Jeśli interfejs jest interfejsem funkcyjnym, to możemy go użyć, aby wykorzystać wyrażenie lambda.
+
+	
